@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 const ImageSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  // Array of images from your slideshow folder
+  // Array of images from Imgur
   const images = [
-    '/images/slideshow/cover.png',
-    '/images/slideshow/jr.png',
-    '/images/slideshow/jrchill.png',
-    '/images/slideshow/jrpaint.png',
-    '/images/slideshow/jrpose.png'
+    'https://i.imgur.com/oPt4NH9.jpg',
+    'https://i.imgur.com/gRPPr78.jpg',
+    'https://i.imgur.com/KUa1WSO.jpg',
+    'https://i.imgur.com/tKqLGEt.jpg',
+    'https://i.imgur.com/OZPV5x8.jpg'
   ];
 
   // Auto-advance slideshow every 4 seconds

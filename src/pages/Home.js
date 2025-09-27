@@ -96,28 +96,28 @@ const Home = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Featured works with actual images */}
+            {/* Featured works with portfolio images */}
             {[
               {
                 id: 1,
-                image: '/images/featured-work-1.png',
-                title: 'Abstract Composition',
+                image: 'https://i.imgur.com/azbvlL9.jpg',
+                title: 'Feature 1',
                 medium: 'Digital Art',
                 year: '2024'
               },
               {
                 id: 2,
-                image: '/images/featured-work-2.png',
-                title: 'Hands Study',
+                image: 'https://i.imgur.com/8gSTZcw.jpg',
+                title: 'Hybrid',
                 medium: 'Mixed Media',
                 year: '2024'
               },
               {
                 id: 3,
-                image: '/images/featured-work-3.png',
-                title: 'Urban Perspective',
-                medium: 'Photography',
-                year: '2023'
+                image: 'https://i.imgur.com/6AgfaXY.jpg',
+                title: 'Rebirth',
+                medium: 'Digital Art',
+                year: '2024'
               }
             ].map((work) => (
               <motion.div 
