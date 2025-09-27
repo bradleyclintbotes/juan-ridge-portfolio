@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PortfolioManager from '../components/PortfolioManager';
-import ImageTest from '../components/ImageTest';
 import portfolioData from '../data/portfolioData';
-import testPortfolioData from '../data/testPortfolioData';
 
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [filter, setFilter] = useState('all');
   const [showManager, setShowManager] = useState(false);
-  const [portfolioItems, setPortfolioItems] = useState(testPortfolioData);
+  const [portfolioItems, setPortfolioItems] = useState(portfolioData);
   const [loading, setLoading] = useState(false);
 
   // Load artworks from localStorage or use default portfolio data

@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Image Test</title>
+    <title>Image Test - Juan-Ridge Portfolio</title>
     <style>
-        body { background: #1a1a1a; color: white; padding: 20px; }
-        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .image-item { border: 1px solid #333; padding: 10px; border-radius: 8px; }
-        .image-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; }
-        .error { border: 2px solid red; }
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: white; }
+        img { border: 2px solid #333; margin: 10px; }
+        .test-section { margin: 20px 0; }
+        .error { color: red; }
+        .success { color: green; }
     </style>
 </head>
 <body>
-    <h1>Portfolio Images Test</h1>
-    <div class="image-grid">
-        <div class="image-item">
-            <h3>Feature 1</h3>
-            <img src="/images/portfolio/feature-1.png" alt="Feature 1" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Feature 3</h3>
-            <img src="/images/portfolio/feature-3.png" alt="Feature 3" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Hybrid</h3>
-            <img src="/images/portfolio/hybrid.png" alt="Hybrid" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Rebirth</h3>
-            <img src="/images/portfolio/rebirth.png" alt="Rebirth" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Self</h3>
-            <img src="/images/portfolio/self.png" alt="Self" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Speak None</h3>
-            <img src="/images/portfolio/speaknone.png" alt="Speak None" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Tanned</h3>
-            <img src="/images/portfolio/tanned.png" alt="Tanned" onerror="this.parentElement.classList.add('error')">
-        </div>
-        <div class="image-item">
-            <h3>Which</h3>
-            <img src="/images/portfolio/which.png" alt="Which" onerror="this.parentElement.classList.add('error')">
-        </div>
+    <h1>Image Test - Juan-Ridge Portfolio</h1>
+    
+    <div class="test-section">
+        <h2>Portfolio Images:</h2>
+        <img src="/images/portfolio/feature-1.png" alt="Feature 1" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/portfolio/hybrid.png" alt="Hybrid" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/portfolio/rebirth.png" alt="Rebirth" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+    </div>
+    
+    <div class="test-section">
+        <h2>Slideshow Images:</h2>
+        <img src="/images/slideshow/cover.png" alt="Cover" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/slideshow/jr.png" alt="JR" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/slideshow/jrchill.png" alt="JR Chill" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+    </div>
+    
+    <div class="test-section">
+        <h2>Featured Images:</h2>
+        <img src="/images/featured-work-1.png" alt="Featured 1" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/jrstand.png" alt="JR Stand" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+    </div>
+
+    <div class="test-section">
+        <h2>Direct Image URLs:</h2>
+        <p>Test these URLs directly in your browser:</p>
+        <ul>
+            <li><a href="/images/portfolio/feature-1.png" target="_blank">/images/portfolio/feature-1.png</a></li>
+            <li><a href="/images/slideshow/cover.png" target="_blank">/images/slideshow/cover.png</a></li>
+            <li><a href="/images/jrstand.png" target="_blank">/images/jrstand.png</a></li>
+        </ul>
     </div>
 </body>
 </html>
