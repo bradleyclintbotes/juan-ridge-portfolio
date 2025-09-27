@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/juan-ridge-portfolio/static/css/main.9ff2bc84.css",
-    "main.js": "/juan-ridge-portfolio/static/js/main.f1103f6d.js",
+    "main.js": "/juan-ridge-portfolio/static/js/main.61242bc2.js",
     "index.html": "/juan-ridge-portfolio/index.html",
     "main.9ff2bc84.css.map": "/juan-ridge-portfolio/static/css/main.9ff2bc84.css.map",
-    "main.f1103f6d.js.map": "/juan-ridge-portfolio/static/js/main.f1103f6d.js.map"
+    "main.61242bc2.js.map": "/juan-ridge-portfolio/static/js/main.61242bc2.js.map"
   },
   "entrypoints": [
     "static/css/main.9ff2bc84.css",
-    "static/js/main.f1103f6d.js"
+    "static/js/main.61242bc2.js"
   ]
 }
