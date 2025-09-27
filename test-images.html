@@ -2,20 +2,45 @@
 <html>
 <head>
     <title>Image Test - Juan-Ridge Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: white; }
+        img { border: 2px solid #333; margin: 10px; }
+        .test-section { margin: 20px 0; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
 </head>
 <body>
-    <h1>Image Test</h1>
-    <h2>Portfolio Images:</h2>
-    <img src="/images/portfolio/feature-1.png" alt="Feature 1" style="width: 200px; margin: 10px;">
-    <img src="/images/portfolio/hybrid.png" alt="Hybrid" style="width: 200px; margin: 10px;">
-    <img src="/images/portfolio/rebirth.png" alt="Rebirth" style="width: 200px; margin: 10px;">
+    <h1>Image Test - Juan-Ridge Portfolio</h1>
     
-    <h2>Slideshow Images:</h2>
-    <img src="/images/slideshow/cover.png" alt="Cover" style="width: 200px; margin: 10px;">
-    <img src="/images/slideshow/jr.png" alt="JR" style="width: 200px; margin: 10px;">
+    <div class="test-section">
+        <h2>Portfolio Images:</h2>
+        <img src="/images/portfolio/feature-1.png" alt="Feature 1" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/portfolio/hybrid.png" alt="Hybrid" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/portfolio/rebirth.png" alt="Rebirth" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+    </div>
     
-    <h2>Featured Images:</h2>
-    <img src="/images/featured-work-1.png" alt="Featured 1" style="width: 200px; margin: 10px;">
-    <img src="/images/jrstand.png" alt="JR Stand" style="width: 200px; margin: 10px;">
+    <div class="test-section">
+        <h2>Slideshow Images:</h2>
+        <img src="/images/slideshow/cover.png" alt="Cover" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/slideshow/jr.png" alt="JR" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/slideshow/jrchill.png" alt="JR Chill" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+    </div>
+    
+    <div class="test-section">
+        <h2>Featured Images:</h2>
+        <img src="/images/featured-work-1.png" alt="Featured 1" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+        <img src="/images/jrstand.png" alt="JR Stand" style="width: 200px;" onerror="this.style.border='2px solid red'; this.alt='ERROR: Image not found';">
+    </div>
+
+    <div class="test-section">
+        <h2>Direct Image URLs:</h2>
+        <p>Test these URLs directly in your browser:</p>
+        <ul>
+            <li><a href="/images/portfolio/feature-1.png" target="_blank">/images/portfolio/feature-1.png</a></li>
+            <li><a href="/images/slideshow/cover.png" target="_blank">/images/slideshow/cover.png</a></li>
+            <li><a href="/images/jrstand.png" target="_blank">/images/jrstand.png</a></li>
+        </ul>
+    </div>
 </body>
 </html>
