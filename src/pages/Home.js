@@ -1,31 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import InstagramFeed from '../components/InstagramFeed';
+import LatestWorks from '../components/LatestWorks';
 import ImageSlideshow from '../components/ImageSlideshow';
 
 const Home = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center relative overflow-hidden">
-        {/* Background - Gallery Style with Slideshow */}
+      <section className="min-h-screen flex flex-col md:flex-row relative overflow-hidden">
+        {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-dark-grey to-charcoal">
           <div className="absolute inset-0 bg-black/30"></div>
-          {/* Auto-slideshow background on the left */}
-          <div className="absolute left-0 top-0 w-1/2 h-full">
-            <ImageSlideshow />
-          </div>
         </div>
-        
-        {/* Hero Content - Right Side with Black Background */}
-        <div className="absolute right-0 top-0 w-1/2 h-full bg-black flex items-center justify-center">
-          <div className="text-center px-8 max-w-lg">
+
+        {/* Hero Content - Left side on desktop */}
+        <div className="relative w-full md:w-1/2 h-screen bg-black/80 md:bg-transparent flex items-center justify-center z-20">
+          <div className="text-center px-4 sm:px-8 max-w-lg w-full">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold mb-6 text-white"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold mb-4 md:mb-6 text-white"
             >
               Juan-Ridge Isaacs
             </motion.h1>
@@ -34,7 +30,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl sm:text-2xl text-muted mb-8"
+              className="text-lg sm:text-xl md:text-2xl text-muted mb-4 md:mb-8"
             >
               Visual Artist & Student
             </motion.p>
@@ -43,7 +39,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg text-muted mb-12 leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-muted mb-8 md:mb-12 leading-relaxed px-2"
             >
               Exploring contemporary themes through mixed media, digital art, and experimental forms. 
               A student artist pushing boundaries and creating meaningful connections through visual storytelling.
@@ -53,16 +49,21 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4"
             >
-              <Link to="/portfolio" className="btn-primary">
+              <Link to="/portfolio" className="btn-primary text-sm md:text-base py-3 px-6">
                 View Portfolio
               </Link>
-              <Link to="/about" className="btn-secondary">
+              <Link to="/about" className="btn-secondary text-sm md:text-base py-3 px-6">
                 Learn More
               </Link>
             </motion.div>
           </div>
+        </div>
+
+        {/* Auto-slideshow background - Right side on desktop */}
+        <div className="relative w-full md:w-1/2 h-screen z-10">
+          <ImageSlideshow />
         </div>
 
         {/* Scroll Indicator */}
@@ -83,38 +84,38 @@ const Home = () => {
       </section>
 
       {/* Featured Works Preview */}
-      <section className="py-20 bg-dark-grey">
+      <section className="py-12 md:py-20 bg-dark-grey">
         <div className="container-max section-padding">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h2 className="text-4xl font-serif font-semibold mb-4">Featured Works</h2>
-            <p className="text-muted text-lg">A selection of recent pieces</p>
+            <h2 className="text-2xl md:text-4xl font-serif font-semibold mb-2 md:mb-4">Featured Works</h2>
+            <p className="text-muted text-base md:text-lg">A selection of recent pieces</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {/* Featured works with portfolio images */}
             {[
               {
                 id: 1,
-                image: 'https://i.imgur.com/azbvlL9.jpg',
+                image: `${process.env.PUBLIC_URL}/images/feature-1.png`,
                 title: 'Feature 1',
                 medium: 'Digital Art',
                 year: '2024'
               },
               {
                 id: 2,
-                image: 'https://i.imgur.com/8gSTZcw.jpg',
+                image: `${process.env.PUBLIC_URL}/images/hybrid.png`,
                 title: 'Hybrid',
                 medium: 'Mixed Media',
                 year: '2024'
               },
               {
                 id: 3,
-                image: 'https://i.imgur.com/6AgfaXY.jpg',
+                image: `${process.env.PUBLIC_URL}/images/rebirth.png`,
                 title: 'Rebirth',
                 medium: 'Digital Art',
                 year: '2024'
@@ -132,6 +133,9 @@ const Home = () => {
                     src={work.image} 
                     alt={work.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.src = '/images/placeholder.svg';
+                    }}
                   />
                 </div>
                 <h3 className="text-lg font-medium mb-2">{work.title}</h3>
@@ -148,8 +152,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Instagram Feed */}
-      <InstagramFeed limit={6} />
+      {/* Latest Works */}
+      <LatestWorks limit={6} />
     </div>
   );
 };

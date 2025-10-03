@@ -5,24 +5,52 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Prevent zoom on iOS Safari */
+    -webkit-text-size-adjust: 100%;
   }
   
   body {
     @apply bg-charcoal text-white font-sans;
+    /* Improve touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent horizontal scroll */
+    overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+  
+  /* Improve touch targets on mobile */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better text rendering on mobile */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-white text-charcoal px-6 py-3 font-medium transition-all duration-300 hover:bg-muted hover:text-white;
+    @apply bg-white text-charcoal px-4 md:px-6 py-3 font-medium transition-all duration-300 hover:bg-muted hover:text-white rounded-lg;
+    /* Better touch targets */
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .btn-secondary {
-    @apply border border-white text-white px-6 py-3 font-medium transition-all duration-300 hover:bg-white hover:text-charcoal;
+    @apply border border-white text-white px-4 md:px-6 py-3 font-medium transition-all duration-300 hover:bg-white hover:text-charcoal rounded-lg;
+    /* Better touch targets */
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .section-padding {

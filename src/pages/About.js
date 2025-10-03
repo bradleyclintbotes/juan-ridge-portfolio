@@ -34,9 +34,12 @@ const About = () => {
             >
               <div className="w-full h-auto bg-white/5 rounded-lg overflow-hidden">
                 <img 
-                  src="/images/jrstand.png" 
+                  src={`${process.env.PUBLIC_URL}/images/jrstand.png`} 
                   alt="Juan-Ridge Isaacs - Visual Artist"
                   className="w-full h-auto object-cover"
+                  onError={(e) => {
+                    e.target.src = `${process.env.PUBLIC_URL}/images/placeholder.svg`;
+                  }}
                 />
               </div>
             </motion.div>

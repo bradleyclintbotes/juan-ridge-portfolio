@@ -72,21 +72,21 @@ const Portfolio = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container-max section-padding">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8 md:mb-16"
           >
-            <h1 className="text-5xl font-serif font-bold mb-6">Portfolio</h1>
-            <p className="text-xl text-muted max-w-3xl mx-auto mb-8">
+            <h1 className="text-3xl md:text-5xl font-serif font-bold mb-4 md:mb-6">Portfolio</h1>
+            <p className="text-base md:text-xl text-muted max-w-3xl mx-auto mb-6 md:mb-8 px-4">
               A collection of works exploring contemporary themes through various mediums
             </p>
             <button
               onClick={() => setShowManager(true)}
-              className="btn-primary"
+              className="btn-primary text-sm md:text-base py-3 px-6"
             >
               Manage Portfolio
             </button>
@@ -97,13 +97,13 @@ const Portfolio = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12 px-4"
           >
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setFilter(category.id)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`px-3 md:px-6 py-2 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base ${
                   filter === category.id
                     ? 'bg-white text-charcoal'
                     : 'bg-white/10 text-muted hover:bg-white/20 hover:text-white'
@@ -117,11 +117,11 @@ const Portfolio = () => {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="py-20 bg-dark-grey">
+      <section className="py-12 md:py-20 bg-dark-grey">
         <div className="container-max section-padding">
           <motion.div 
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-4"
           >
             <AnimatePresence>
               {filteredItems.map((item, index) => (
@@ -141,6 +141,9 @@ const Portfolio = () => {
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
                       loading="lazy"
+                      onError={(e) => {
+                        e.target.src = `${process.env.PUBLIC_URL}/images/placeholder.svg`;
+                      }}
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -170,14 +173,14 @@ const Portfolio = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-2 md:p-4"
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="max-w-6xl max-h-[95vh] bg-charcoal rounded-xl overflow-hidden shadow-2xl"
+              className="max-w-6xl max-h-[95vh] bg-charcoal rounded-xl overflow-hidden shadow-2xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
@@ -190,16 +193,16 @@ const Portfolio = () => {
                 </div>
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-300"
+                  className="absolute top-2 right-2 md:top-4 md:right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-300"
                 >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
-              <div className="p-8">
-                <h3 className="text-3xl font-serif font-semibold mb-3">{selectedImage.title}</h3>
-                <p className="text-lg text-muted mb-4">{selectedImage.medium}, {selectedImage.year}</p>
+              <div className="p-4 md:p-8">
+                <h3 className="text-xl md:text-3xl font-serif font-semibold mb-2 md:mb-3">{selectedImage.title}</h3>
+                <p className="text-base md:text-lg text-muted mb-3 md:mb-4">{selectedImage.medium}, {selectedImage.year}</p>
                 {selectedImage.caption && (
                   <p className="text-muted mb-6 leading-relaxed">
                     {selectedImage.caption}

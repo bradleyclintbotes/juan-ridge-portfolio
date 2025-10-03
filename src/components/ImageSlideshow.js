@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 const ImageSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  // Array of images from Imgur
+  // Array of HomeScreen images
   const images = [
-    'https://i.imgur.com/oPt4NH9.jpg',
-    'https://i.imgur.com/gRPPr78.jpg',
-    'https://i.imgur.com/KUa1WSO.jpg',
-    'https://i.imgur.com/tKqLGEt.jpg',
-    'https://i.imgur.com/OZPV5x8.jpg'
+    `${process.env.PUBLIC_URL}/images/HomeScreen/cover.png`,
+    `${process.env.PUBLIC_URL}/images/HomeScreen/jr.png`,
+    `${process.env.PUBLIC_URL}/images/HomeScreen/jrchill.png`,
+    `${process.env.PUBLIC_URL}/images/HomeScreen/jrpaint.png`,
+    `${process.env.PUBLIC_URL}/images/HomeScreen/jrpose.png`
   ];
 
   // Auto-advance slideshow every 4 seconds
@@ -42,16 +42,16 @@ const ImageSlideshow = () => {
             className="w-full h-full bg-cover bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${images[currentIndex]})`,
-              backgroundPosition: 'left center'
+              backgroundPosition: 'center center'
             }}
           >
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-black/20"></div>
           </div>
         </motion.div>
       </AnimatePresence>
 
       {/* Slideshow indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 right-4 flex space-x-2">
         {images.map((_, index) => (
           <button
             key={index}
