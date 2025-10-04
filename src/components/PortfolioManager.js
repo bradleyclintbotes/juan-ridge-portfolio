@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '../contexts/AuthContext';
 import ImageUpload from './ImageUpload';
 import portfolioData from '../data/portfolioData';
 
 const PortfolioManager = ({ onClose }) => {
+  const { logout } = useAuth();
   const [artworks, setArtworks] = useState(portfolioData);
   const [showUpload, setShowUpload] = useState(false);
   const [editingArtwork, setEditingArtwork] = useState(null);
@@ -70,6 +72,12 @@ const PortfolioManager = ({ onClose }) => {
               className="btn-primary"
             >
               Add New Artwork
+            </button>
+            <button
+              onClick={logout}
+              className="bg-red-500/20 text-red-300 px-4 py-2 rounded-lg hover:bg-red-500/30 transition-colors duration-300"
+            >
+              Logout
             </button>
             <button
               onClick={onClose}
