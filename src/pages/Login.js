@@ -49,6 +49,9 @@ const Login = () => {
               <p className="text-muted">
                 Enter password to access portfolio management
               </p>
+              <p className="text-muted text-sm mt-2">
+                (No username required - password only)
+              </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">

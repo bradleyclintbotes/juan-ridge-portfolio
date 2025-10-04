@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import PortfolioManager from '../components/PortfolioManager';
 import portfolioData from '../data/portfolioData';
 
 const Portfolio = () => {
+  const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
   const [selectedImage, setSelectedImage] = useState(null);
   const [filter, setFilter] = useState('all');
   const [showManager, setShowManager] = useState(false);
@@ -85,7 +89,7 @@ const Portfolio = () => {
               A collection of works exploring contemporary themes through various mediums
             </p>
             <button
-              onClick={() => setShowManager(true)}
+              onClick={() => navigate('/portfolio-manager')}
               className="btn-primary text-sm md:text-base py-3 px-6"
             >
               Manage Portfolio
