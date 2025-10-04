@@ -9,6 +9,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Shop', path: '/shop' },
     { name: 'Exhibitions', path: '/exhibitions' },
     { name: 'Contact', path: '/contact' },
   ];
