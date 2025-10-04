@@ -54,6 +54,9 @@ const Home = () => {
               <Link to="/portfolio" className="btn-primary text-sm md:text-base py-3 px-6">
                 View Portfolio
               </Link>
+              <Link to="/shop" className="btn-secondary text-sm md:text-base py-3 px-6">
+                Shop Art
+              </Link>
               <Link to="/about" className="btn-secondary text-sm md:text-base py-3 px-6">
                 Learn More
               </Link>
@@ -144,9 +147,12 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 space-x-4">
             <Link to="/portfolio" className="btn-secondary">
               View Full Portfolio
+            </Link>
+            <Link to="/shop" className="btn-primary">
+              Shop Artworks
             </Link>
           </div>
         </div>
