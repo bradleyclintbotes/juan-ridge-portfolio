@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bradleyclintbotes.github.io/juan-ridge-portfolio/sitemap.xml
+
+# Allow all search engines to crawl all content
+Disallow:
+
+# Specific directives for better indexing
+Crawl-delay: 1
