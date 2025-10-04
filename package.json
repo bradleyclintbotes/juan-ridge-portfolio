@@ -2,7 +2,7 @@
   "name": "juan-ridge-portfolio",
   "version": "1.0.0",
   "description": "Visual Artist Portfolio for Juan-Ridge Isaacs",
-  "homepage": ".",
+  "homepage": "https://bradleyclintbotes.github.io/juan-ridge-portfolio",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
