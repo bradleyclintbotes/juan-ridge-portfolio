@@ -2,11 +2,11 @@
   "name": "juan-ridge-portfolio",
   "version": "1.0.0",
   "description": "Visual Artist Portfolio for Juan-Ridge Isaacs",
-  "homepage": "https://www.juanridgeart.co.za",
+  "homepage": "https://www.juanridgeart.co.za/",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && node -e \"require('fs').copyFileSync('CNAME', 'build/CNAME')\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
