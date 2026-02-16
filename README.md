@@ -14,7 +14,7 @@ A modern, responsive portfolio website for visual artist and student Juan-Ridge 
 
 ## 🚀 Live Demo
 
-Visit the portfolio at: [Your deployed URL here]
+Visit the portfolio at: [https://www.juanridgeart.co.za](https://www.juanridgeart.co.za)
 
 ## 📱 Sections
 
@@ -36,7 +36,7 @@ Visit the portfolio at: [Your deployed URL here]
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/juan-ridge-portfolio.git
+   git clone https://github.com/YOUR_USERNAME/juan-ridge-portfolio.git
    cd juan-ridge-portfolio
    ```
 

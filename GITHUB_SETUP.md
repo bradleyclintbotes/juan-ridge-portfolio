@@ -63,7 +63,7 @@ git push -u origin main
 4. **Branch**: main
 5. **Folder**: / (root)
 6. **Save**
-7. **Your site will be at**: `https://YOUR_USERNAME.github.io/juan-ridge-portfolio`
+7. **Your site will be at**: `https://www.juanridgeart.co.za` (after custom domain setup)
 
 ## 🔄 Automatic Updates
 
@@ -80,16 +80,17 @@ Once connected to GitHub:
 
 ## 📱 Custom Domain (Optional)
 
-### Buy a Domain
-- **GoDaddy**: `juanridge.com`
-- **Namecheap**: `juanridge.art`
-- **Google Domains**: `juan-ridge.com`
+### Domain Setup
+- **Current Domain**: `www.juanridgeart.co.za` ✅
 
 ### Connect Domain
 1. **In Netlify/Vercel**: Go to Domain settings
-2. **Add custom domain**
-3. **Update DNS records** as instructed
-4. **SSL certificate** (automatic)
+2. **Add custom domain**: `www.juanridgeart.co.za`
+3. **Update DNS records** as instructed by your hosting provider:
+   - Add A record or CNAME pointing to your hosting platform
+   - For Netlify: Use the provided DNS target
+   - For Vercel: Use the provided DNS configuration
+4. **SSL certificate** (automatic - usually takes a few minutes to provision)
 
 ## 🎯 Repository Features
 

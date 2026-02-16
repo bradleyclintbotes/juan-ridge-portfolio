@@ -21,9 +21,10 @@ This guide shows you how to deploy Juan-Ridge Isaacs' portfolio website to the i
    - Set publish directory: `build`
    - Click "Deploy site"
 
-3. **Custom domain (optional):**
+3. **Custom domain:**
    - Go to Site settings → Domain management
-   - Add your custom domain (e.g., juanridge.com)
+   - Add your custom domain: `www.juanridgeart.co.za`
+   - Configure DNS records as instructed by Netlify
 
 ### Option 2: Vercel (Free & Fast)
 **Best for: React apps with automatic deployments**
@@ -144,11 +145,8 @@ The website is already mobile-optimized with:
 - `juanridge.vercel.app`
 - `yourusername.github.io/juan-ridge-portfolio`
 
-### Custom Domains:
-- `juanridge.com`
-- `juanridge.art`
-- `juanridge.portfolio`
-- `juan-ridge.com`
+### Custom Domain:
+- `www.juanridgeart.co.za` ✅ (Current domain)
 
 ## 📊 Analytics & Monitoring
 
