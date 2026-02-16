@@ -51,6 +51,9 @@ const Footer = () => {
           <p className="text-muted text-sm">
             © {new Date().getFullYear()} Juan-Ridge Isaacs. All rights reserved.
           </p>
+          <p className="text-muted text-xs mt-2">
+            Created by <span className="text-white/80">OPPA Creative</span>
+          </p>
         </div>
       </div>
     </motion.footer>
